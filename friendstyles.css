@@ -1,0 +1,152 @@
+/*
+    A. GOOGLE FONTS IMPORT
+    This imports a cute font called "Quicksand" from Google Fonts.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+/*
+    B. GLOBAL STYLES
+    These styles apply to the entire body of the website.
+*/
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #fff9f0; /* A very light, soft cream color */
+    color: #5d4a4a; /* A gentle, dark brown for text */
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box; /* Ensures padding doesn't affect total width */
+}
+
+/*
+    C. HEADER AND SECTION STYLES
+    Basic styling for the main headings and content containers.
+*/
+header h1 {
+    font-size: 3em;
+    color: #ff9a8b; /* A soft, playful coral */
+    margin-bottom: 0.5em;
+    letter-spacing: 2px;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/*
+    D. WELCOME MESSAGE/POEM STYLES
+*/
+#welcome-message p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+/*
+    E. COUNTDOWN STYLES
+*/
+#countdown-container p {
+    font-size: 1.5em;
+    margin: 0 0 10px 0;
+    color: #8c728c; /* A soft plum color */
+}
+
+#countdown {
+    font-size: 5em;
+    font-weight: bold;
+    color: #b3e2a2; /* A cute mint green */
+    transition: transform 0.3s ease-in-out;
+}
+
+/*
+    F. IMAGE GALLERY STYLES
+*/
+#image-gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s forwards; /* An animation to make images appear smoothly */
+}
+
+/* An animation that makes the elements fade in */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hidden {
+    display: none;
+}
+
+/*
+    G. QUIZ STYLES
+*/
+#quiz-container {
+    background-color: #ffebcd; /* A warm, gentle peach color */
+}
+
+#quiz-container h2 {
+    color: #ff9a8b;
+    font-size: 2em;
+}
+
+#quiz-questions div {
+    margin-bottom: 20px;
+}
+
+#quiz-questions p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="text"], button {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #dcdcdc;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #ff9a8b;
+    outline: none;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #b3e2a2;
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #a0d18b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#quiz-result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #8c728c;
+    font-weight: bold;
+}
