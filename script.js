@@ -1,7 +1,44 @@
-// Add these lines to your script.js file
-document.getElementById('poem-p1').innerHTML = `In this corner of the web, so new,<br>A little hello is waiting for you.<br>Step inside, let the fun begin,<br>A friendly space to let you in,<br>Where every moment is a win.`;
+// The Countdown Logic
+let count = 5;
+const countdownInterval = setInterval(() => {
+    count--;
+    const countdownEl = document.getElementById('countdown');
+    if (countdownEl) {
+        countdownEl.textContent = count;
+    }
 
-document.getElementById('poem-p2').innerHTML = `No need to rush, take your own sweet time,<br>With colors soft and a gentle chime.<br>A journey shared, a path we start,<br>It’s a simple art,<br>To find a home for your heart.`;
+    if (count <= 0) {
+        clearInterval(countdownInterval);
+        const countdownContainer = document.getElementById('countdown-container');
+        if (countdownContainer) {
+            countdownContainer.style.display = 'none';
+        }
+        startImageDisplay();
+    }
+}, 1000);
+
+// The Image Display Logic
+let imageIndex = 0;
+const imageGallery = document.getElementById('image-gallery');
+const images = imageGallery.querySelectorAll('img');
+
+function startImageDisplay() {
+    const imageInterval = setInterval(() => {
+        if (imageIndex > 0) {
+            images[imageIndex - 1].classList.add('hidden');
+        }
+        if (imageIndex < images.length) {
+            images[imageIndex].classList.remove('hidden');
+            imageIndex++;
+        } else {
+            clearInterval(imageInterval);
+            imageGallery.style.display = 'none';
+            document.getElementById('quiz-container').classList.remove('hidden');
+            renderQuiz();
+        }
+    }, 2000);
+}
+
 // The Mini-Quiz Logic
 const quizQuestions = [
     {
@@ -49,7 +86,7 @@ function renderQuiz() {
                 const radioContainer = document.createElement('div');
                 const radio = document.createElement('input');
                 radio.type = "radio";
-                radio.name = q.question;
+                radio.name = q.question.replace(/\s+/g, '-');
                 radio.value = option;
                 
                 const label = document.createElement('label');
@@ -64,7 +101,6 @@ function renderQuiz() {
         quizQuestionsEl.appendChild(questionDiv);
     });
 
-    // Add a submit button at the end of the quiz
     const submitButton = document.createElement('button');
     submitButton.textContent = "See My Results!";
     submitButton.addEventListener('click', () => {
