@@ -1,30 +1,18 @@
-/*
-    A. GOOGLE FONTS IMPORT
-    This imports a cute font called "Quicksand" from Google Fonts.
-*/
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 
-/*
-    B. GLOBAL STYLES
-    These styles apply to the entire body of the website.
-*/
 body {
     font-family: 'Quicksand', sans-serif;
-    background-color: #fff9f0; /* A very light, soft cream color */
-    color: #5d4a4a; /* A gentle, dark brown for text */
+    background-color: #fff9f0;
+    color: #5d4a4a;
     text-align: center;
     padding: 20px;
     margin: 0;
-    box-sizing: border-box; /* Ensures padding doesn't affect total width */
+    box-sizing: border-box;
 }
 
-/*
-    C. HEADER AND SECTION STYLES
-    Basic styling for the main headings and content containers.
-*/
 header h1 {
     font-size: 3em;
-    color: #ff9a8b; /* A soft, playful coral */
+    color: #ff9a8b;
     margin-bottom: 0.5em;
     letter-spacing: 2px;
 }
@@ -43,43 +31,33 @@ section {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-/*
-    D. WELCOME MESSAGE/POEM STYLES
-*/
 #welcome-message p {
     font-size: 1.2em;
     line-height: 1.6;
     margin: 15px 0;
 }
 
-/*
-    E. COUNTDOWN STYLES
-*/
 #countdown-container p {
     font-size: 1.5em;
     margin: 0 0 10px 0;
-    color: #8c728c; /* A soft plum color */
+    color: #8c728c;
 }
 
 #countdown {
     font-size: 5em;
     font-weight: bold;
-    color: #b3e2a2; /* A cute mint green */
+    color: #b3e2a2;
     transition: transform 0.3s ease-in-out;
 }
 
-/*
-    F. IMAGE GALLERY STYLES
-*/
 #image-gallery img {
     max-width: 100%;
     height: auto;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 1s forwards; /* An animation to make images appear smoothly */
+    animation: fadeIn 1s forwards;
 }
 
-/* An animation that makes the elements fade in */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -89,11 +67,8 @@ section {
     display: none;
 }
 
-/*
-    G. QUIZ STYLES
-*/
 #quiz-container {
-    background-color: #ffebcd; /* A warm, gentle peach color */
+    background-color: #ffebcd;
 }
 
 #quiz-container h2 {
